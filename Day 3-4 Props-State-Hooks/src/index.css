@@ -1,0 +1,100 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  width: 350px;
+  height: auto;
+  background-color: #3c3c3c;
+  padding: 50px;
+}
+
+.list-content{
+  display: flex;
+  /* justify-content: space-evenly; */
+  width: 100%;
+  height: auto;
+  background-color: #3c3c3c;
+  
+}
+
+.list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  list-style-type:none;
+}
+
+.list li{
+  display: inline;
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  margin: 10px;
+  width: 100%;
+}
+
+button{
+  width: 100%;
+  height: 40px;
+  background-color: rgb(161, 161, 255);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.card-container-class{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  width: 350px;
+  height: auto;
+  background-color: #3c3c3c;
+  padding: 50px;
+}
+
+h2{
+  color: white;
+}
+
+.login-logout{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+.login-logout button{
+  margin: 10px;
+  width: 120px;
+  height: 40px;
+  background-color: rgb(255, 187, 0);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.login-logout button:hover{
+  background-color: rgb(70, 51, 0);
+  color: white;
+}
