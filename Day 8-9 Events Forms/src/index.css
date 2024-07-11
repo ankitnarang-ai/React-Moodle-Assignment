@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.facebook-logo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100px;
+  background-color: #4267b2;
+  color: white;
+  font-size: 30px;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(219, 214, 214);
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  background-color:transparent;
+}
+
+.form{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 15px 5px gray;
+}
+
+.form input{
+  padding: 10px;
+  margin:10px;
+  width: 300px;
+}
+
+.loginBtn{
+  padding: 10px;
+  margin: 10px;
+  background-color:#4267b2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+}
+.createAccountContainer{
+  display: flex;
+  flex-direction: column;
+  /* position: ; */
+  width: 100%;
+  left: 0;
+  background-color:transparent;
+  position: relative;
+}
+.createAccountBtn{  
+  padding: 10px;
+  margin: 10px auto;
+  justify-content:center;
+  align-items: center;
+  width: 200px;
+  background-color:#378a07;
+  border-radius:5px ;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+}
+
+.forgotPasswordBtn{
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  color: rgb(71, 19, 203);
+  cursor: pointer;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0px 20px;
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px; 
+  height: auto; 
+}
+
+.navbar-items {
+  flex: 1; 
+  display: flex;
+  margin-left: 100px;
+}
+
+.navbar-items ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-items li {
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: smaller;
+}
