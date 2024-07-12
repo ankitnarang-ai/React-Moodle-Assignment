@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import { login } from '../../reducer/loginSlice';
-import { addToCart } from '../../reducer/cartSlice'; // Assuming the path to cartSlice is correct
+import { addToCart } from '../../reducer/cartSlice';
 
 interface CardProps {
   imageUrl: string;
