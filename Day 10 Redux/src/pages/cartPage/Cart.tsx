@@ -5,6 +5,7 @@ const cart = () => {
   return (
     <div>
       <Provider store={store}>
+        <center><h1>CART</h1></center>
       <Cart />
     </Provider>
     </div>
