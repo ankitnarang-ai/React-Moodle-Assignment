@@ -96,28 +96,29 @@
 
 /* Singup form css here  */
 
-.signup-container{
+.signup-container {
   position: relative;
   display: flex;
   width: 100%;
   height: 100vh;
   align-items: center;
   justify-content: center;
-  background-color: rgb(219, 214, 214);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-.form{
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around ;
+  justify-content: space-around;
   width: 400px;
   height: 400px;
-  background-color: #ffffff;
-  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.input{
+.input {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -125,44 +126,137 @@
   align-items: center;
 }
 
-.form input{
+.form input {
   width: 80%;
   height: 40px;
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid #e0e0e0;
   outline: none;
   border-radius: 50px;
   padding: 10px;
   margin: 10px;
-  box-shadow: 0px 0px 5px 1px #525252;
+  box-shadow: 0px 0px 5px 1px rgba(82, 82, 82, 0.1);
+  transition: border-color 0.3s ease;
 }
 
-.signupBtn{
+.form input:focus {
+  border-color: #667eea;
+}
+
+.signupBtn {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.signupBtn button{
+.signupBtn button {
   width: 80%;
   height: 40px;
-  border: 2px solid rgb(0, 0, 0);
+  border: none;
   outline: none;
   border-radius: 50px;
   padding: 10px;
   margin: 10px;
-  background-color: rgb(16, 0, 81);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.form h3{
+.signupBtn button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.signupBtn button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form h3 {
   display: flex;
   justify-content: center;
   align-items: center;
   left: 0;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
 }
 
-span{
-  color: red;
+span {
+  color: #e74c3c;
+}
+
+/* Login css here  */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 350px;
+}
+
+.login-input {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-input h3 {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.login-input input {
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.login-input input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.loginBtn {
+  margin-top: 30px;
+}
+
+.loginBtn button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.loginBtn button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.loginBtn button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
