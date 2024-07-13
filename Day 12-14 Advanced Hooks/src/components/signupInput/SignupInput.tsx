@@ -1,11 +1,13 @@
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const SignupInput = () => {
+  const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const signup = (data: any) => {
     localStorage.setItem('user', JSON.stringify(data));
+    navigate('/');
   };
 
   return (
@@ -35,9 +37,7 @@ const SignupInput = () => {
         {errors.password && <span>Password is required and should be at least 6 characters long</span>}
         </div>
         <div className="signupBtn">
-          <Link to="/">
           <button type="submit">Signup</button>
-          </Link>
         </div>
       </form>
     </div>
