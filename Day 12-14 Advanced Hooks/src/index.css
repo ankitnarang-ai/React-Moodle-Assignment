@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NavBar CSS here  */
+
+.navbar-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 20px 20px;
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-search{
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  flex: 1;
+}
+
+.navbar-search input{
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px;
+}
+
+.navbar-logo{
+  display: flex;
+  align-items: center;
+  flex: 0.4;
+}
+
+.navbar-logo img{
+  width: 150px;
+  height: auto;
+}
+
+.navbar-buttons{
+  display: flex;
+  flex: 0.8;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.credentialBtn{
+  width: 100%;
+  display: flex;
+  flex: 0.5;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.credentialBtn button{
+  background-color: transparent;
+  padding: 10px;
+  width: 100px;
+  background-color: black;
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px 1px #525252;
+}
+
+.credentialBtn button:hover{
+  background-color: rgb(70, 51, 0);
+  color: white;
+}
+
+.CartBtn{
+  width: 100px;
+  background-color: rgb(16, 0, 81);
+  padding: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(254, 254, 254);
+  cursor: pointer;
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px 1px #100037;
+}
+
+.CartBtn:hover{
+  background-color: rgb(10, 25, 58);
+  color: white;
+}
