@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Navbar, Container, Card } from "../../components";
+import { Navbar, Container, Card, Loader } from "../../components";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { addItems } from "../../reducer/itemSlice";
@@ -26,6 +26,9 @@ const Layout = () => {
     }
   }, [dispatch, items.length, isLoading]);
 
+  if(isLoading) {
+    return <Loader />
+  }
   return (
     <div>
       <Navbar />

@@ -4,6 +4,7 @@ import LoginInput from "./loginInput/LoginInput";
 import Navbar from "./navbar/Navbar";
 import SignupInput from "./signupInput/SignupInput";
 import Cart from "./cart/Cart";
+import Loader from "./loader/Loader";
 
 export { 
     Card, 
@@ -11,5 +12,6 @@ export {
     LoginInput, 
     Navbar, 
     SignupInput,
-    Cart
+    Cart,
+    Loader
 }

@@ -22,7 +22,6 @@ const Card = () => {
       dispatch(addToCart(item));
       alert("Item added to cart")
     }
-
   };
 
   return (
