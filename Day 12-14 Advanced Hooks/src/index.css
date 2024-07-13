@@ -93,3 +93,76 @@
   background-color: rgb(10, 25, 58);
   color: white;
 }
+
+/* Singup form css here  */
+
+.signup-container{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(219, 214, 214);
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around ;
+  width: 400px;
+  height: 400px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.input{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form input{
+  width: 80%;
+  height: 40px;
+  border: 2px solid rgb(0, 0, 0);
+  outline: none;
+  border-radius: 50px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0px 0px 5px 1px #525252;
+}
+
+.signupBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.signupBtn button{
+  width: 80%;
+  height: 40px;
+  border: 2px solid rgb(0, 0, 0);
+  outline: none;
+  border-radius: 50px;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(16, 0, 81);
+  color: white;
+  cursor: pointer;
+}
+
+.form h3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+}
+
+span{
+  color: red;
+}

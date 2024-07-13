@@ -1,9 +1,11 @@
-
-
 const LoginInput = () => {
   return (
     <div>
-      <h1>LoginInput</h1>
+      <input type="text" placeholder="Enter your email"/>
+      <input type="password" placeholder="Enter your password" /> 
+      <div className="loginBtn">
+        <button>Login</button>
+      </div>
     </div>
   )
 }
