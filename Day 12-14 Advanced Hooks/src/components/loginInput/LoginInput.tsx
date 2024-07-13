@@ -1,4 +1,7 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { login } from '../../reducer/authSlice';
+import { useNavigate } from 'react-router-dom';
 
 type FormValues = {
   email: string;
@@ -7,9 +10,29 @@ type FormValues = {
 
 const LoginInput = () => {
   const { register, handleSubmit, formState: { errors } } = useForm<FormValues>();
-
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const userData: any = localStorage.getItem('user');
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data);
+
+    if(userData===null) {
+      alert("Please Signup first")
+      navigate('/signup')
+    }
+
+    const userDataObject = JSON.parse(userData)
+
+    if(userDataObject?.email === data.email && userDataObject?.password === data.password) {
+
+      const isLoggedIn = dispatch(login())
+ 
+      if (isLoggedIn) {
+        navigate('/')
+      } else {
+        alert('Invalid email or password')
+      }
+
+    }
   };
 
   return (
