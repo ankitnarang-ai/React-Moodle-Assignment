@@ -7,18 +7,26 @@ const Navbar = () => {
   const userData = localStorage.getItem('user');
   const [searchQuery, setSearchQuery] = useState('')
   const selector: any =  useSelector((state: any) => state.item.items);
+  const duplicateItems: any = useSelector((state: any) => state.item.itemsSearch);
   const dispatch = useDispatch();
-  const handleSearchChange =(e: any)=>{
-    setSearchQuery(e.target.value);
-    const selectedItem = selector.filter((item: any) =>
-      item.title.toLowerCase().startsWith(e.target.value.toLowerCase())
-    );
-    if(e.target.value === ''){
-      dispatch(addItems(selector))
+
+  console.log("first", selector);
+  console.log('second', duplicateItems);
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+  
+    if(query.length === 0) {
+      dispatch(addItems(duplicateItems));
     }
-    dispatch(addItems(selectedItem))
-    console.log("Filtered items", selectedItem);
-  }
+    else{
+      const selectedItem = duplicateItems.filter((item: any) =>
+            item.title.toLowerCase().includes(query.toLowerCase())
+      );
+      dispatch(addItems(selectedItem));
+    }
+  };
+
   return (
     <div className="navbar-container">
       <div className="navbar-logo">

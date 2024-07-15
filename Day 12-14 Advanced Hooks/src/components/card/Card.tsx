@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from '../../reducer/cartSlice';
 import { useNavigate } from 'react-router-dom';
+import { duplicatItems } from '../../reducer/itemSlice';
 
 const Card = () => {
   const items = useSelector((state: any) => state.item.items);
@@ -20,6 +21,7 @@ const Card = () => {
     }
     else{
       dispatch(addToCart(item));
+      dispatch(duplicatItems(item));
       alert("Item added to cart")
     }
   };

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Navbar, Container, Card, Loader } from "../../components";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { addItems } from "../../reducer/itemSlice";
+import { addItems, duplicatItems } from "../../reducer/itemSlice";
 
 const Layout = () => {
   const dispatch = useDispatch();
@@ -10,25 +10,27 @@ const Layout = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (items.length === 0 && isLoading) {
+    if (isLoading) {
       axios
         .get("https://fakestoreapi.com/products?sort=desc")
         .then((res) => {
           const fetchedItems = res.data;
           console.log("layout items", fetchedItems);
           dispatch(addItems(fetchedItems));
+          dispatch(duplicatItems(fetchedItems));
           setIsLoading(false);
         })
         .catch((err) => {
           console.log(err);
-          setIsLoading(false);
+          setIsLoading(true);
         });
-    }
-  }, [dispatch, items.length, isLoading]);
+      }
+    }, [dispatch, items.length, isLoading]);
 
-  if(isLoading) {
-    return <Loader />
-  }
+    if(isLoading) {
+      return <Loader />
+    }
+ 
   return (
     <div>
       <Navbar />
